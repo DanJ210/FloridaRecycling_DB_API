@@ -22,8 +22,6 @@ namespace FloridaRecycling_Db_API.Controllers {
         [HttpGet]
         public Task<IEnumerable<Metals>> Get() {
             return _repository.GetMetalsAsync();
-
-            //Test
         }
 
         // GET api/values/5
