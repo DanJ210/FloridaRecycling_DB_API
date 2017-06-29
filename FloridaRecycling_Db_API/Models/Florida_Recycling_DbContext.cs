@@ -6,7 +6,7 @@ namespace FloridaRecycling_Db_API.Models
 {
     public partial class Florida_Recycling_DbContext : DbContext
     {
-        public DbSet<Metals> Metals { get; set; }
+        public virtual DbSet<Metals> Metals { get; set; }
 
         public Florida_Recycling_DbContext(DbContextOptions options) : base(options) {
 
@@ -15,7 +15,7 @@ namespace FloridaRecycling_Db_API.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-            //optionsBuilder.UseSqlServer();
+            //optionsBuilder.UseSqlServer(@"Server=tcp:floridarecycling.database.windows.net;Database=Florida_Recycling_Db;User Id=danj210;Password=2Acq628210!");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -24,8 +24,6 @@ namespace FloridaRecycling_Db_API.Models
             {
                 entity.HasKey(e => e.CommodityId)
                     .HasName("PK_Metals");
-
-                //entity.Property(e => e.CommodityImage).HasColumnType("image");
             });
         }
     }
