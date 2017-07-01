@@ -10,5 +10,6 @@ namespace FloridaRecycling_Db_API.Models
         public double CommodityPrice { get; set; }
         public double? CustomerWeight { get; set; }
         public double? Total { get; set; }
+        public string CommodityImageUrl { get; set; }
     }
 }
