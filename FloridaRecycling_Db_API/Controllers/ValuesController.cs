@@ -18,10 +18,10 @@ namespace FloridaRecycling_Db_API.Controllers
         }
         // GET api/values
         [HttpGet]
-        public async Task<IEnumerable<Metals>> Get()
+        public string[] Get()
         {
-            //return new string[] { "value1", "value2" };
-            return await _repository.GetMetalsAsync();
+            return new string[] { "value1", "value2" };
+            //return await _repository.GetMetalsAsync();
         }
 
         // GET api/values/5
