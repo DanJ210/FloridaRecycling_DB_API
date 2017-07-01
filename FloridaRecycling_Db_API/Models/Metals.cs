@@ -7,9 +7,9 @@ namespace FloridaRecycling_Db_API.Models
     {
         public int CommodityId { get; set; }
         public string CommodityName { get; set; }
-        public double CommodityPrice { get; set; }
-        public double? CustomerWeight { get; set; }
-        public double? Total { get; set; }
+        public decimal CommodityPrice { get; set; }
+        public decimal? CustomerWeight { get; set; }
+        public decimal? Total { get; set; }
         public string CommodityImageUrl { get; set; }
     }
 }
