@@ -12,5 +12,6 @@ namespace FloridaRecycling_Db_API.Models
         public decimal? Total { get; set; }
         public string CommodityImageUrl { get; set; }
         public string CommodityDescription { get; set; }
+        public string Header { get; set; }
     }
 }
